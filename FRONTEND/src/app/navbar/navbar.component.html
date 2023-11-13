@@ -1,0 +1,36 @@
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="public/css/styles.css">
+<nav class="navbar navbar-default">
+    <div class="container">
+         <div class="navbar-header"> 
+            <p class="navbar-brand">LibroWave</p>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+             6 
+            <li id="home"><a href="/">HOME</a></li>
+            <li id="about"><a href="/about">ABOUT US</a></li>
+            <li id="contact"><a href="/contact">CONTACT US</a></li>
+        </ul>
+    </div>
+</nav>  -->
+
+<mat-toolbar color="primary">
+    <span>
+      <div routerLink="/">LibroWave</div>
+    </span>
+    <span class="spacer"></span>
+    <div *ngIf="isAuthenticated" >Welcome {{userName}}</div>
+    <button mat-icon-button matTooltip="Notifications" *ngIf="isAuthenticated">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Returned Books" *ngIf="isAuthenticated">
+        <mat-icon>assignment_returned</mat-icon>
+      </button>
+      <button mat-icon-button matTooltip="Issued Books" *ngIf="isAuthenticated">
+        <mat-icon>shopping_basket</mat-icon>
+      </button>
+    <button mat-icon-button matTooltip="Logout" (click)="logout()" *ngIf="isAuthenticated">
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+    
+  </mat-toolbar>

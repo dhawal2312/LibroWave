@@ -1,0 +1,31 @@
+<!-- <div class="banner-container">
+    <img src="../../assets/banner.avif" alt=""  class="banner-image">
+</div> -->
+
+<div class="container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let book of books">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <mat-card-title>{{book.name}}</mat-card-title>
+                      <mat-card-subtitle>Author: {{book.author}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="../../assets/booksImages/{{book.image}}" alt="Image unavailable" class="card-image">
+                    <mat-card-content *ngIf="book.quantity<1">
+                      <p style="color: red;">
+                        <em><b>Currently out of stock.</b></em>
+                      </p>
+                    </mat-card-content>
+                    
+                    <mat-card-actions>
+                      <button mat-raised-button color="primary" [routerLink]="['/book-detail', book._id]">View Details</button>
+
+                    </mat-card-actions>
+                    
+                  </mat-card>
+            </div>
+
+        </div>
+    </div>
+</div>

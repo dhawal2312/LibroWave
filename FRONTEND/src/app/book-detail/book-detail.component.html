@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-1">
+            <mat-card class="example-card" *ngIf="bookData">
+                <mat-card-header>
+                  <mat-card-title>{{bookData?.name}}</mat-card-title>
+                  <mat-card-subtitle>Author: {{bookData?.author}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/booksImages/{{bookData?.image}}" alt="Image unavailable" class="card-image">
+                
+                
+                
+                
+              </mat-card>
+        </div>
+        <div class="col-md-3 offset-1">
+            <div class="details">
+                <p><b> Description:</b> {{bookData?.description}}</p>
+                <p> <b>Available Quantity: </b>
+                     <span style="color: green;" *ngIf="bookData?.quantity>10">{{bookData?.quantity}}</span>
+                     <span style="color: red;" *ngIf="bookData?.quantity<5">{{bookData?.quantity}}</span>
+                </p>
+                <button mat-raised-button color="primary" [disabled]="bookData?.quantity<1">Order Now</button>
+            </div>
+        </div>
+    </div>
+</div>
