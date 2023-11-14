@@ -28,7 +28,7 @@
                      <span style="color: green;" *ngIf="bookData?.quantity>10">{{bookData?.quantity}}</span>
                      <span style="color: red;" *ngIf="bookData?.quantity<5">{{bookData?.quantity}}</span>
                 </p>
-                <button mat-raised-button color="primary" [disabled]="bookData?.quantity<1">Order Now</button>
+                <button mat-fab extended color="primary" [disabled]="bookData?.quantity<1" (click)="issueBook()">Issue Now</button>
             </div>
         </div>
     </div>
