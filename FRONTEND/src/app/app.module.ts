@@ -23,6 +23,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { IssuedBooksComponent } from './issued-books/issued-books.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    IssuedBooksComponent
   ],
   imports: [
     BrowserModule,
