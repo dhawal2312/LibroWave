@@ -23,7 +23,7 @@
     <button mat-icon-button matTooltip="Notifications" *ngIf="isAuthenticated">
         <mat-icon>notifications</mat-icon>
       </button>
-      <button mat-icon-button matTooltip="Returned Books" *ngIf="isAuthenticated">
+      <button mat-icon-button matTooltip="Returned Books" *ngIf="isAuthenticated" [routerLink]="['/returned-books']">
         <mat-icon>assignment_returned</mat-icon>
       </button>
       <button mat-icon-button matTooltip="Issued Books" *ngIf="isAuthenticated" [routerLink]="['/issued-books']">

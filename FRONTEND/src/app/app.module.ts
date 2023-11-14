@@ -24,6 +24,7 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { IssuedBooksComponent } from './issued-books/issued-books.component';
+import { ReturnedBooksComponent } from './returned-books/returned-books.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { IssuedBooksComponent } from './issued-books/issued-books.component';
     RegisterComponent,
     DashboardComponent,
     BookDetailComponent,
-    IssuedBooksComponent
+    IssuedBooksComponent,
+    ReturnedBooksComponent
   ],
   imports: [
     BrowserModule,
