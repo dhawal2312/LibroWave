@@ -1,0 +1,23 @@
+.banner-container{
+    width: 90%;
+    height: 50%;
+    margin-top: 15px;
+   
+    margin-left: 50px;
+    background-size: cover; /* Ensures the background image covers the entire container */
+    background-position: center; 
+}
+
+.banner-image {
+    width: 100%; /* Make sure the image takes up the full width of its container */
+    height: 100%; /* Make sure the image takes up the full height of its container */
+    object-fit: cover; /* Ensures the image covers the entire container while maintaining its aspect ratio */
+}
+
+
+.example-card{
+    margin-bottom: 20px;
+}
+.card-image{
+    height: 250px; 
+}

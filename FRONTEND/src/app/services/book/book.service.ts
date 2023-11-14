@@ -8,6 +8,7 @@ export class BookService {
 
   private booksUrl="http://localhost:5000/api/book/get-all-books";
   private getBookByIdURL="http://localhost:5000/api/book/get-book-by-id";
+  private getIssuedBooksURL ="http://localhost:5000/api/users/get-issued-books";
   constructor(private http: HttpClient) {
 
    }
@@ -27,5 +28,14 @@ export class BookService {
       return this.http.get(this.getBookByIdURL+"/"+bookId,{headers})
     }
     return ;
+   }
+
+   getIssuedBooks(){
+    const token=localStorage.getItem('token')
+    if(token){
+      const headers = new HttpHeaders().set('x-auth-token',token);
+      return this.http.get(this.getIssuedBooksURL, {headers})
+    }
+    return;
    }
 }
