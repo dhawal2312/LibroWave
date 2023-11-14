@@ -1,1 +1,29 @@
-<p>returned-books works!</p>
+<div class="container">
+    <ngx-spinner
+      bdColor="rgba(51,51,51,0.8)"
+      size="medium"
+      color="#fff"
+      type="ball-fussion"
+  >
+      <p style="font-size: 20px; color: white">Loading...</p>
+  </ngx-spinner>
+  <div class="row">
+      <div class="col-md-12" *ngFor="let book of books">
+          <mat-card class="example-card">
+              <mat-card-header>
+                <mat-card-title>{{book?.bookDetail?.name}}</mat-card-title>
+                <mat-card-subtitle>Author: {{book?.bookDetail?.author}}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p><b>Returned Date: {{book?.bookIssueInfo?.returnDate | date:'medium'}}</b></p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-stroked-button color="primary" [routerLink]="['/book-detail', book.bookDetail._id]">Want to Issue again? Click here.</button>&nbsp;&nbsp;
+              </mat-card-actions>
+
+              <img src="../../assets/booksImages/{{book.bookDetail.image}}" alt="Image" style="position: absolute; right: 10px; bottom: 10px; width: 100px; max-height: 90%;">
+            </mat-card>
+      </div>
+
+  </div>
+</div>
