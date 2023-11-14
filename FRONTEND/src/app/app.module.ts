@@ -22,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { NgxSpinnerModule } from "ngx-spinner";
+
 
 @NgModule({
   declarations: [
@@ -52,7 +54,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
       timeOut:5000,
       positionClass:'toast-bottom-center',
       preventDuplicates:true
-    })
+    }),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
